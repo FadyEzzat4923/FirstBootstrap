@@ -1,0 +1,259 @@
+:root {
+    --dark-color: #19283f;
+    --blue-color: #33d1cc;
+    --red-color: #ff3150;
+    --yellow-color: #ffc400;
+    --section-color: #eff7fa;
+}
+
+* {
+    user-select: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    background-color: var(--dark-color);
+}
+
+
+.navbar .navbar-nav .nav-link,
+.light {
+    color: #fff;
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+    color: var(--blue-color);
+}
+
+.navbar .search {
+    border-left: 1px solid var(--blue-color);
+}
+
+.navbar .search svg {
+    color: var(--blue-color);
+    cursor: pointer;
+}
+
+.navbar .navbar-toggler {
+    color: white;
+    font-size: 1.5rem;
+    border-color: #fff;
+}
+
+.navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="false"] {
+    border: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"] {
+    border-color: var(--blue-color);
+}
+
+.navbar-brand h2 {
+    font-style: italic;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.main-btn {
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+    padding: 0.5rem 1rem;
+}
+
+.main-btn:hover {
+    background-color: red;
+    color: var(--yellow-color);
+}
+
+.landing {
+    background-color: var(--dark-color);
+    height: calc(100vh - 72px);
+}
+
+.main-title::after {
+    content: "";
+    width: 120px;
+    height: 2px;
+    background-color: var(--blue-color);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.featuers .icon-holder {
+    height: 200px;
+}
+
+.featuers .icon-holder svg {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.featuers .icon-holder .number {
+    font-size: 12rem;
+    color: var(--section-color);
+}
+
+.featuers .icon-holder .icon {
+    color: var(--blue-color);
+}
+
+.featuers .feat h4 {
+    color: var(--yellow-color);
+}
+
+/* Our Work */
+.our-work {
+    background-color: var(--section-color);
+}
+
+.our-work ul .active {
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+}
+
+.our-work ul li {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.our-work ul li:not(.active) {
+    color: var(--red-color);
+}
+
+.our-work ul li:not(.active):hover {
+    color: var(--blue-color);
+}
+
+.our-work .box {
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.our-work .box::before {
+    content: attr(data-work);
+    position: absolute;
+    background-color: #33d1cccb;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transition: 0.6s;
+    font-size: 1.5rem;
+    transform: translateY(calc(-100% - 5px));
+}
+
+.our-work .box:hover:before {
+    transform: translateY(0);
+}
+
+/* Stuff */
+.stuff .description {
+    max-width: 550px;
+}
+
+/* teem */
+.teem {
+    background-color: var(--section-color);
+}
+
+.teem .box {
+    transition: 0.3s;
+}
+
+.teem .box:hover {
+    transform: scale(1.03);
+}
+
+.teem h2 {
+    color: var(--yellow-color);
+}
+
+.teem h4 {
+    padding: 10px 0;
+    background-color: var(--blue-color);
+}
+
+/* Project */
+.project {
+    background-color: var(--dark-color);
+}
+
+/* Card */
+.card {
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+/* Subscribe */
+.subscribe {
+    background-color: var(--yellow-color);
+}
+
+.subscribe input[type="email"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+}
+
+.subscribe input[type="email"]:focus {
+    outline: none;
+}
+
+.subscribe input[type="email"]::placeholder {
+    color: #fff;
+}
+
+.subscribe input[type="submit"] {
+    background-color: var(--dark-color);
+    color: var(--yellow-color);
+}
+
+/* Fotter */
+.footer {
+    background-color: var(--dark-color);
+}
+
+.footer .copyright>span {
+    color: var(--blue-color);
+}
+
+.footer .copyright div span {
+    color: var(--yellow-color);
+}
+
+.footer .contact ul svg {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    height: 20px;
+}
+
+.footer .facebook {
+    background-color: #1877f2;
+}
+
+.footer .twitter {
+    background-color: #1da1f2;
+}
+
+.footer .linkedin {
+    background-color: #0077b5;
+}
+
+.footer .youtube {
+    background-color: #f00;
+}
